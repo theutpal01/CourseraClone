@@ -1,12 +1,12 @@
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import CourseCard from "../UI/CourseCard";
-import { courses } from "../../data";
+import { test } from "../../data";
 
 const DisplayData = () => {
 	return (
 		<>
 			<div className="grid grid-cols-3 gap-8 mx-auto">
-				{courses.map((course) => (
+				{test.map((course) => (
 					<CourseCard key={course.id} {...course} />
 				))}
 			</div>

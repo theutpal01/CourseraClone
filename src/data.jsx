@@ -683,7 +683,7 @@ export const courseDetails = {
 	},
 };
 
-const test = [
+export const test = [
 	{
 		id: 1,
 		name: "AI For Everyone",

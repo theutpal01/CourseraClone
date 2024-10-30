@@ -17,9 +17,9 @@ const Checkbox = ({ name, text }) => {
 					viewBox="0 0 24 24"
 					fill="none"
 					stroke="currentColor"
-					stroke-width="4"
-					stroke-linecap="round"
-					stroke-linejoin="round"
+					strokeWidth="4"
+					strokeLinecap="round"
+					strokeLinejoin="round"
 				>
 					<polyline points="20 3 9 15 4 9"></polyline>
 				</svg>

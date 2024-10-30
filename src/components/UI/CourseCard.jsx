@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 
 const CourseCard = ({
 	id,
-	img,
+	images,
 	name,
 	skills,
 	rating,
@@ -16,8 +16,7 @@ const CourseCard = ({
 	const navigate = useNavigate();
 
 	const handleRedirect = () => {
-		const uniqueId = id + "-" + name.replace(/\s+/g, "-").toLowerCase();
-		navigate(`/course/${uniqueId}`);
+		navigate(`/course/${id}`);
 	};
 
 	return (
@@ -26,7 +25,7 @@ const CourseCard = ({
 			onClick={handleRedirect}
 		>
 			<img
-				src={img}
+				src={images.path}
 				alt=""
 				className="h-44 w-full object-contain bg-white p-3 rounded-xl"
 			/>
@@ -35,7 +34,7 @@ const CourseCard = ({
 					<h2 className="font-semibold leading-relaxed">{name}</h2>
 					<p className="py-2 text-sm">
 						<span className="font-semibold">Skills you'll gain: </span>
-						{skills}
+						{skills.join(", ")}
 					</p>
 				</div>
 				<div className="text-xs text-neutral">

@@ -11,18 +11,20 @@ const Home = ({ login }) => {
 	return (
 		<div>
 			{!login && (
-				<>
+				<div>
 					<Hero />
 					<Goals />
 					<Promote />
 					<Feature />
 					<Testimonial />
 					<Join />
-				</>
+				</div>
 			)}
 
 			{login && (
-				<Browse />
+				<div>
+					<Browse />
+				</div>
 			)}
 		</div>
 	);

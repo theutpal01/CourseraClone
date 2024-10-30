@@ -13,7 +13,7 @@ import CompanyLogo8 from "../../assets/home/hero/company8.png";
 const Hero = () => {
 	return (
 		<>
-			<div className="container mx-auto p-16 lg:p-32 flex flex-col gap-24 md:flex-row items-center justify-between">
+			<div className="container mx-auto px-12 lg:px-32 py-20 flex flex-col gap-24 md:flex-row items-center justify-between">
 				<div className="flex flex-col gap-8 w-full md:w-3/4 lg:w-3/5 mb-8 lg:mb-0">
 					<h1 className="text-6xl lg:text-8xl mb-6 lg:mb-8 text-black font-semibold">
 						Your Course To Success
