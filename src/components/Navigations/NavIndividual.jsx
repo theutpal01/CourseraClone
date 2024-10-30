@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import Coursera from "../../assets/base/coursera.png";
 import { FiMenu, FiX } from "react-icons/fi";
 import {
@@ -11,8 +12,10 @@ import {
 	LuUser,
 } from "react-icons/lu";
 import { useScrollDirection } from "../../hooks/useScrollDirection";
+import Button from "../UI/Button";
 
 function NavIndividual({ login, setLogin }) {
+	const location = useLocation();
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const [languageDropdown, setLanguageDropdown] = useState(false);
@@ -72,24 +75,31 @@ function NavIndividual({ login, setLogin }) {
 		<>
 			<nav
 				className={`${
-					direction === "down" ? "top-0" : "top-0 lg:top-12"
+					direction === "down" ? "top-0" : "top-0 lg:top-9"
 				} sticky bg-white z-40 flex flex-col text-gray-500 transition-all duration-300 drop-shadow border-b border-gray-300`}
 			>
-				<div className="flex lg:px-28 px-8 py-4 justify-between w-full">
+				<div className="flex lg:px-16 xl:px-28 px-8 py-4 lg:py-2 gap-10 justify-between w-full">
 					{/* Logo and Explore Dropdown */}
-					<div className="flex items-center space-x-6">
+					<div className="flex items-center flex-grow">
 						<NavLink to="/" className="text-xl font-bold">
-							<img src={Coursera} alt="Coursera Logo" className="h-6 w-auto" />
+							<img
+								src={Coursera}
+								alt="Coursera Logo"
+								className="h-5 object-contain w-auto"
+							/>
 						</NavLink>
 
 						<div className="hidden lg:block relative px-4">
-							<button
-								onClick={toggleDropdown}
-								className="text-white bg-blue-600 font-semibold btn btn-outline rounded-lg hover:bg-white hover:text-black"
+							<Button
+								variant="primary"
+								type="outlined"
+								size="sm"
+								onCLick={toggleDropdown}
+								className="flex gap-2 items-center"
 							>
 								Explore
 								{isDropdownOpen ? <LuChevronUp /> : <LuChevronDown />}
-							</button>
+							</Button>
 							{isDropdownOpen && (
 								<div className="absolute mt-2 w-64 bg-white border rounded-md shadow-lg p-4 z-50">
 									{/* Goals Section */}
@@ -203,14 +213,14 @@ function NavIndividual({ login, setLogin }) {
 							)}
 						</div>
 
-						<div className="hidden lg:flex items-center relative w-96">
+						<div className="hidden lg:flex items-center relative flex-grow max-w-96">
 							<input
 								type="text"
 								placeholder="What do you want to learn?"
-								className="pl-4 pr-12 py-3 bg-white border border-gray-300 rounded-full focus:outline-none focus:border-blue-500 w-full"
+								className="pl-3 py-2 bg-white border border-gray-300 rounded-full focus:outline-none focus:border-blue-500 w-full"
 							/>
 							<NavLink
-								className="absolute right-[5px] cursor-pointer hover:bg-blue-500/80 duration-300 transition-all bg-blue-500 rounded-full active:scale-90 text-white text-xl origin-center w-auto h-auto p-[10px]"
+								className="absolute right-[4px] cursor-pointer hover:bg-blue-500/80 duration-300 transition-all bg-blue-500 rounded-full active:scale-90 text-white text-xl origin-center w-auto h-auto p-[8px]"
 								to={"/search"}
 							>
 								<LuSearch />
@@ -218,28 +228,27 @@ function NavIndividual({ login, setLogin }) {
 						</div>
 					</div>
 
-					<div className="hidden lg:flex space-x-6 items-center">
+					<div className="hidden lg:flex gap-3 items-center">
 						{!login ? (
 							// Display links when logged out
 							<>
-								<NavLink to="/" className="font-bold hover:text-gray-700">
+								<NavLink to="/" className="text-sm hover:text-gray-700">
 									For Enterprise
 								</NavLink>
-								<NavLink to="/" className="font-bold hover:text-gray-700">
+								<NavLink to="/" className="text-sm hover:text-gray-700">
 									Students
 								</NavLink>
 								<NavLink
 									to="/"
-									className="font-bold text-blue-600 hover:text-gray-700"
+									className="text-sm text-blue-600 hover:text-gray-700"
 									onClick={handleLogin}
 								>
 									Log In
 								</NavLink>
-								<NavLink
-									to="/"
-									className="font-bold btn bg-blue-600 text-white hover:bg-white hover:text-black"
-								>
-									Join for Free
+								<NavLink to="/">
+									<Button variant="primary" size="sm" className="font-medium">
+										Join for Free
+									</Button>
 								</NavLink>
 							</>
 						) : (
@@ -341,12 +350,10 @@ function NavIndividual({ login, setLogin }) {
 				</div>
 
 				<div>
-					{!login ? (
-						<></>
-					) : (
+					{login && ["/", "/my-learning"].includes(location.pathname) ? (
 						<>
 							{/* New Row with Home and My Learning Links in a new line */}
-							<div className="flex justify-start space-x-6 *:transition-all *:duration-300 *:border-b-4 *:py-2 *:px-4 *:hover:text-blue-600">
+							<div className="flex justify-start gap-5 *:transition-all *:duration-300 *:border-b-4 *:py-2 *:px-4 hover:*:text-primary">
 								<NavLink
 									to="/"
 									className={({ isActive }) => {
@@ -369,6 +376,8 @@ function NavIndividual({ login, setLogin }) {
 								</NavLink>
 							</div>
 						</>
+					) : (
+						<></>
 					)}
 				</div>
 			</nav>

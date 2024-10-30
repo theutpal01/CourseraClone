@@ -1,7 +1,10 @@
-import { useParams } from "react-router-dom";
-import { test } from "../data";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { FaStar, FaThumbsUp } from "react-icons/fa";
+
+import courseBG from "../assets/courses/course-bg.png";
+import { test } from "../data";
+import Button from "../components/UI/Button";
 
 const Course = () => {
 	const [course, setCourse] = useState(null);
@@ -17,29 +20,33 @@ const Course = () => {
 	return (
 		<div className="min-h-screen">
 			{course && (
-				<div className="relative bg-slate-200 h-[500px] flex flex-col justify-center px-16 gap-2">
-					<div>
-						<h2 className="text-neutral text-4xl font-bold">{course.name}</h2>
-						<p className="text-neutral">
-							Instructor: {course.courseOverview.instructor}
-						</p>
-						<button className="mt-4 rounded-sm btn text-white bg-blue-600 border-none hover:bg-blue-500 max-w-64 h-auto py-4 leading-4 flex flex-col font-medium">
-							Enroll for {course.price}
-							<span className="text-xs font-normal">
-								Starts{" "}
-								{new Date().toLocaleDateString("en-US", {
-									month: "short",
-									day: "numeric",
-								})}
-							</span>
-						</button>
-						<p className="text-neutral text-sm">
-							<strong>{course.courseOverview.enrollment}</strong> alreay
-							enrolled.
-						</p>
+				<div className="relative bg-slate-200 h-[500px] flex flex-col justify-center px-16 gap-3">
+					<h2 className="text-neutral text-4xl font-bold">{course.name}</h2>
+					<p className="text-neutral">
+						Instructor: {course.courseOverview.instructor}
+					</p>
+					<Button
+						variant="primary"
+						className="flex flex-col justify-center items-center px-20 mt-7"
+					>
+						Enroll for {course.price}
+						<span className="text-xs font-normal">
+							Starts{" "}
+							{new Date().toLocaleDateString("en-US", {
+								month: "short",
+								day: "numeric",
+							})}
+						</span>
+					</Button>
+					<p className="text-neutral text-sm">
+						<strong>{course.courseOverview.enrollment}</strong> alreay enrolled.
+					</p>
+
+					<div className="absolute z-0 right-0 bottom-0 h-full overflow-hidden">
+						<img src={courseBG} className="object-contain" />
 					</div>
 
-					<div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-10/12 py-4 bg-white drop-shadow-xl rounded-md flex divide-gray-300 divide-x *:text-neutral *:p-4 *:flex-grow items-center *:px-8 *:w-1/5">
+					<div className="absolute z-10 bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-10/12 py-4 bg-white drop-shadow-xl rounded-md flex divide-gray-300 divide-x *:text-neutral *:p-4 *:flex-grow items-center *:px-8 *:w-1/5">
 						<div>
 							<p className="font-medium text-lg">
 								{course.modules.length} module

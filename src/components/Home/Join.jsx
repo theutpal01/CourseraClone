@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import NextStep from "../../assets/home/join/nextstep.png"
 import BulkLogo from "../../assets/home/join/bulklogo.png";
+import Button from "../UI/Button";
 
 const Join = () => {
 	return (
@@ -23,9 +24,9 @@ const Join = () => {
 						Coursera catalog.
 					</p>
 					<NavLink to="/home">
-						<button className="bg-blue-600 text-white px-6 md:px-8 lg:px-10 py-2 md:py-3 lg:py-4 text-md md:text-lg rounded-md hover:bg-blue-500 transition duration-300">
+						<Button variant="primary" className="px-8">
 							Join for Free
-						</button>
+						</Button>
 					</NavLink>
 				</div>
 			</div>
@@ -43,12 +44,12 @@ const Join = () => {
 						Coursera for Business.
 					</p>
 					<div className="flex flex-col sm:flex-row gap-4">
-						<button className="bg-blue-50 text-blue-600 border-2 border-blue-600 px-6 md:px-8 lg:px-10 py-2 md:py-3 lg:py-4 rounded-md hover:bg-blue-100 transition duration-300">
+						<Button variant="primary" className="px-8">
 							Coursera For Enterprise
-						</button>
-						<button className="bg-blue-50 text-blue-600 border-2 border-blue-600 px-6 md:px-8 lg:px-10 py-2 md:py-3 lg:py-4 rounded-md hover:bg-blue-100 transition duration-300">
+						</Button>
+						<Button variant="primary" type="outlined" className="px-8">
 							Coursera For Teams
-						</button>
+						</Button>
 					</div>
 				</div>
 				{/* Image */}

@@ -1,4 +1,5 @@
-import React from "react";
+import { NavLink } from "react-router-dom";
+import Button from "../UI/Button";
 import promoteImg from "../../assets/home/promote/promote.png"
 
 const Promote = () => {
@@ -49,15 +50,22 @@ const Promote = () => {
 							- coursera learner Outcomes survey(2019)
 						</span>
 					</p>
-					<div className="space-x-4">
-						<button className="px-4 py-2 bg-blue-600 text-white font-calibri font-bold">
-							Join for Free
-						</button>{" "}
-						{/* Bold button */}
-						<button className="px-4 py-2 border bg-white border-blue-600 text-blue-600 font-calibri  font-semibold">
-							Try Coursera for Business
-						</button>{" "}
-						{/* Made bolder */}
+					<div className="flex gap-2">
+						<NavLink to="/">
+							<Button variant="primary" size="sm" className="px-10">
+								Join for Free
+							</Button>
+						</NavLink>
+						<NavLink to="/business">
+							<Button
+								variant="primary"
+								type="outlined"
+								size="sm"
+								className="px-10"
+							>
+								Try coursera for business
+							</Button>
+						</NavLink>
 					</div>
 				</div>
 			</div>

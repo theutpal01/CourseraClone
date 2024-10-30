@@ -9,6 +9,7 @@ import CompanyLogo5 from "../../assets/home/hero/company5.png";
 import CompanyLogo6 from "../../assets/home/hero/company6.png";
 import CompanyLogo7 from "../../assets/home/hero/company7.png";
 import CompanyLogo8 from "../../assets/home/hero/company8.png";
+import Button from "../UI/Button";
 
 const Hero = () => {
 	return (
@@ -22,11 +23,23 @@ const Hero = () => {
 						Build skills with courses, certificates, and degrees online from
 						world-class universities and companies.
 					</p>
-					<NavLink to="/home">
-						<button className="bg-blue-600 text-white px-6 md:px-8 lg:px-10 py-2 md:py-3 lg:py-4 text-md md:text-lg rounded-md hover:bg-blue-500 transition duration-300">
-							Join for Free
-						</button>
-					</NavLink>
+					<div className="flex gap-2">
+						<NavLink to="/">
+							<Button variant="primary" size="lg" className="px-10 font-medium">
+								Join for Free
+							</Button>
+						</NavLink>
+						<NavLink to="/business">
+							<Button
+								variant="primary"
+								type="outlined"
+								size="lg"
+								className="px-10 font-medium"
+							>
+								Try coursera for business
+							</Button>
+						</NavLink>
+					</div>
 				</div>
 				{/* Image */}
 				<div className="hidden md:block md:w-1/4 lg:w-2/5 w-auto">
@@ -51,7 +64,8 @@ const Hero = () => {
 					<img src={CompanyLogo4} alt="Company" />
 					<img src={CompanyLogo5} alt="Company" />
 					<img src={CompanyLogo6} alt="Company" />
-					<img src={CompanyLogo7} alt="Company" />					<img src={CompanyLogo8} alt="Company" />
+					<img src={CompanyLogo7} alt="Company" />{" "}
+					<img src={CompanyLogo8} alt="Company" />
 				</div>
 			</div>
 		</>

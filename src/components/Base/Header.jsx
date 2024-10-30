@@ -12,8 +12,8 @@ const Header = ({ tab, setTab }) => {
 	
 
 	return (
-		<div className={`${direction === "down" ? "top-0 lg:-top-12" : "top-0"} hidden h-12 lg:block sticky z-50 lg:px-28 px-5 bg-black transition-all duration-300`}>
-			<div className="flex gap-4 *:p-2  *:text-white h-full *:font-medium *:border-b-4 *:transition-all *:duration-300">
+		<div className={`${direction === "down" ? "top-0 lg:-top-9" : "top-0"} hidden h-9 lg:block sticky z-50 lg:px-16 xl:px-28 px-5 bg-black transition-all duration-300`}>
+			<div className="flex gap-4 *:p-1  *:text-white h-full *:font-normal *:border-b-4 *:transition-all *:duration-300">
 				<NavLink
 					to="/"
 					className={`${
@@ -24,9 +24,9 @@ const Header = ({ tab, setTab }) => {
 					For Individuals
 				</NavLink>
 				<NavLink
-					to="/bussiness"
-					className={`${tab === "bussiness" ? "border-white" : "border-black"}`}
-					onClick={() => handleClick("bussiness")}
+					to="/business"
+					className={`${tab === "business" ? "border-white" : "border-black"}`}
+					onClick={() => handleClick("business")}
 				>
 					For Businesses
 				</NavLink>
