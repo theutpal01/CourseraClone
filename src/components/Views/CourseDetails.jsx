@@ -88,7 +88,9 @@ const CourseDetails = ({ details }) => {
 						<div className="flex flex-col gap-1 py-4">
 							<HiOutlineChatBubbleLeftEllipsis className="size-7" />
 							<h4 className="font-medium">Taught in English</h4>
-							<p className="text-sm font-semibold text-primary hover:text-primary-dark cursor-pointer hover:underline">2 languages available</p>
+							<p className="text-sm font-semibold text-primary hover:text-primary-dark cursor-pointer hover:underline">
+								2 languages available
+							</p>
 						</div>
 					</div>
 				</div>
