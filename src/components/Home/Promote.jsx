@@ -4,8 +4,8 @@ import promoteImg from "../../assets/home/promote/promote.png"
 
 const Promote = () => {
 	return (
-		<div className="bg-blue-50 my-16 py-8 px-6 mx-auto">
-			<div className="relative max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center">
+		<div className="bg-blue-50 my-16 py-8 px-5 lg:px-16 xl:px-28 mx-auto">
+			<div className="relative mx-auto flex flex-col lg:flex-row-reverse items-center">
 				{/* Image Section */}
 				<div className="hidden lg:absolute left-0 lg:flex justify-center items-start lg:w-1/2 mb-8 lg:mb-0">
 					{" "}

@@ -5,14 +5,14 @@ import discussImg from "../../assets/home/feature/discuss.png";
 
 const Feature = () => {
 	return (
-		<div className="py-16">
+		<div className="py-16 px-5 lg:px-16 xl:px-28">
 			<h2 className="text-3xl text-neutral font-semibold text-center mb-6">
 				World-class learning for anyone, anywhere
 			</h2>
-			<div className="flex flex-col items-center p-5 bg-white">
-				<div className="flex flex-col md:flex-row items-center max-w-5xl">
+			<div className="flex flex-col items-center py-5 bg-white">
+				<div className="flex flex-col md:flex-row items-center justify-between">
 					{/* Text Section */}
-					<div className="flex flex-col p-4 md:w-1/2 w-full">
+					<div className="flex flex-col py-4 md:w-1/2 w-full">
 						<h2 className="text-blue-600 text-sm mb-2">Top Quality</h2>
 						<h3 className="text-2xl font-medium text-gray-800 mb-4">
 							Learn from leading universities and companies
@@ -27,31 +27,31 @@ const Feature = () => {
 						</p>
 					</div>
 					{/* Image Section */}
-					<div className="p-4 hidden md:block md:w-1/2">
+					<div className="py-4 hidden md:block md:w-1/2 self justify-items-end">
 						<div className="relative">
 							<img
 								src={previewImg}
 								alt="Learning Platform Screenshot"
-								className="w-full drop-shadow"
+								className="max-w-md object-contain drop-shadow"
 							/>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div className="flex flex-col items-center p-5 bg-white">
-				<div className="flex flex-col md:flex-row items-center max-w-5xl">
+			<div className="flex flex-col items-center py-5 bg-white">
+				<div className="flex flex-col md:flex-row items-center">
 					{/* Circles Image Section */}
-					<div className="p-4 hidden md:block md:w-1/2">
+					<div className="py-4 hidden md:block md:w-1/2 justify-items-start">
 						<img
 							src={statsImg}
 							alt="Statistics Circles"
-							className="w-full drop-shadow"
+							className="max-w-md object-contain drop-shadow"
 						/>
 					</div>
 
 					{/* Text Section */}
-					<div className="flex flex-col p-4 md:w-1/2 w-full">
+					<div className="flex flex-col py-4 md:w-1/2 w-full">
 						<h2 className="text-blue-600 text-sm  mb-2">Accessible</h2>
 						<h3 className="text-2xl font-medium text-gray-800 mb-4">
 							Find flexible, affordable options
@@ -65,10 +65,10 @@ const Feature = () => {
 				</div>
 			</div>
 
-			<div className="flex flex-col items-center p-5 bg-white">
-				<div className="flex flex-col md:flex-row items-center max-w-5xl">
+			<div className="flex flex-col items-center py-5 bg-white">
+				<div className="flex flex-col md:flex-row items-center">
 					{/* Text Section */}
-					<div className="flex flex-col p-4 md:w-1/2 w-full">
+					<div className="flex flex-col py-4 md:w-1/2 w-full">
 						<h2 className="text-blue-600 text-sm  mb-2">Applied Learning</h2>
 						<h3 className="text-2xl font-medium text-gray-800 mb-4">
 							Master Skills With In-Depth Learning
@@ -79,28 +79,28 @@ const Feature = () => {
 						</p>
 					</div>
 					{/* Quiz Image Section */}
-					<div className="p-4 hidden md:block md:w-1/2">
+					<div className="py-4 hidden md:block md:w-1/2 justify-items-end">
 						<img
 							src={quizImg}
 							alt="Quiz Module Screenshot"
-							className="w-full drop-shadow"
+							className="max-w-md drop-shadow"
 						/>
 					</div>
 				</div>
 			</div>
 
-			<div className="flex flex-col items-center p-5 bg-white">
-				<div className="flex flex-col md:flex-row items-center max-w-5xl">
+			<div className="flex flex-col items-center py-5 bg-white">
+				<div className="flex flex-col md:flex-row items-center">
 					{/* Sharaable Certificates Image Section */}
-					<div className="p-4 hidden md:block md:w-1/2">
+					<div className="py-4 hidden md:block md:w-1/2 justify-items-start">
 						<img
 							src={discussImg}
 							alt="People discussing"
-							className="w-full drop-shadow"
+							className="max-w-md drop-shadow"
 						/>
 					</div>
 					{/* Text Section */}
-					<div className="flex flex-col p-4 md:w-1/2 w-full">
+					<div className="flex flex-col py-4 md:w-1/2 w-full">
 						<h2 className="text-blue-600 text-sm  mb-2">
 							Shareable Certificates
 						</h2>

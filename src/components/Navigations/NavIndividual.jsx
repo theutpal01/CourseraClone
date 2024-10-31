@@ -76,9 +76,9 @@ function NavIndividual({ login, setLogin }) {
 			<nav
 				className={`${
 					direction === "down" ? "top-0" : "top-0 lg:top-9"
-				} sticky bg-white z-40 flex flex-col text-gray-500 transition-all duration-300 drop-shadow border-b border-gray-300`}
+				} sticky bg-white z-40 flex flex-col text-gray-500 transition-all duration-300 drop-shadow border-b border-gray-300 lg:px-16 xl:px-28 px-5`}
 			>
-				<div className="flex lg:px-16 xl:px-28 px-8 py-4 lg:py-2 gap-10 justify-between w-full">
+				<div className="flex py-4 lg:py-2 gap-10 justify-between w-full">
 					{/* Logo and Explore Dropdown */}
 					<div className="flex items-center flex-grow">
 						<NavLink to="/" className="text-xl font-bold">

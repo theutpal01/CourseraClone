@@ -14,7 +14,7 @@ import Button from "../UI/Button";
 const Hero = () => {
 	return (
 		<>
-			<div className="container mx-auto px-12 lg:px-32 py-20 flex flex-col gap-24 md:flex-row items-center justify-between">
+			<div className="px-5 lg:px-16 xl:p-28 w-full py-20 flex gap-24 flex-row items-center justify-between">
 				<div className="flex flex-col gap-8 w-full md:w-3/4 lg:w-3/5 mb-8 lg:mb-0">
 					<h1 className="text-6xl lg:text-8xl mb-6 lg:mb-8 text-black font-semibold">
 						Your Course To Success
@@ -42,7 +42,7 @@ const Hero = () => {
 					</div>
 				</div>
 				{/* Image */}
-				<div className="hidden md:block md:w-1/4 lg:w-2/5 w-auto">
+				<div className="hidden md:block md:w-1/4 lg:w-2/5">
 					<img
 						src={Image1}
 						alt="Hero Image"
@@ -50,8 +50,8 @@ const Hero = () => {
 					/>
 				</div>
 			</div>
-			<div className="bg-gray-200 py-16 text-center m-0 flex flex-col gap-5">
-				<h2 className="text-2xl font-medium mb-8 text-black">
+			<div className="w-full bg-gray-200 py-16 text-center flex flex-col gap-14 px-5 lg:px-16 xl:px-28">
+				<h2 className="text-2xl font-semibold text-black">
 					We Collaborate With{" "}
 					<span className="text-blue-800">
 						200+ Leading Universities And Companies

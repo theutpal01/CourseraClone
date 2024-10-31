@@ -3,7 +3,7 @@ import { useState } from "react";
 import NavIndividual from "./components/Navigations/NavIndividual";
 import Footer from "./components/Base/Footer";
 import Home from "./pages/Home";
-import Search from "./pages/Search";
+import Courses from "./pages/Courses";
 import MyLearning from "./pages/MyLearning";
 import Course from "./pages/Course";
 import Contact from "./components/Services/Contact";
@@ -18,13 +18,13 @@ function App() {
 			<div className="mx-auto flex flex-col min-h-screen bg-white">
 				<Header tab={tab} setTab={setTab} />
 				<NavIndividual login={login} setLogin={setLogin} />
-				<main>
+				<main className="">
 					<Routes>
 						<Route path="/" element={<Home login={login} />} />
 						<Route path="/my-learning" element={<MyLearning login={login} />} />
-						<Route path="/search" element={<Search login={login} />} />
+						<Route path="/courses" element={<Courses login={login} />} />
 						<Route path="/contact" element={<Contact />} />
-						<Route path="course/:id" element={<Course />} />
+						<Route path="courses/:id" element={<Course />} />
 					</Routes>
 				</main>
 				<Footer childContact="/contact" />

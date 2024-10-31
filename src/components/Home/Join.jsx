@@ -6,8 +6,8 @@ import Button from "../UI/Button";
 const Join = () => {
 	return (
 		<>
-			<div className="container flex flex-col lg:flex-row items-center justify-center text-center lg:text-left gap-20 md:px-8 lg:px-64 py-10 lg:py-16 bg-yellow-50">
-				<div className="w-full lg:w-1/2 flex justify-center mb-8 lg:mb-0">
+			<div className="container flex flex-col lg:flex-row items-center justify-center text-center lg:text-left gap-20 px-5 lg:px-16 xl:px-28 py-28 bg-yellow-50">
+				<div className="w-full lg:w-1/2 flex mb-8 lg:mb-0">
 					<img
 						src={NextStep}
 						alt="Next Step Image"
@@ -32,7 +32,7 @@ const Join = () => {
 			</div>
 
 			{/* Coursera for Business Section */}
-			<div className="container flex flex-col lg:flex-row items-center justify-between text-center lg:text-left gap-16 md:px-8 lg:px-64 py-10 lg:py-16">
+			<div className="container flex flex-col lg:flex-row items-center justify-between text-center lg:text-left gap-16 px-5 lg:px-16 xl:px-28 py-28">
 				{/* Text Content */}
 				<div className="w-full lg:w-1/2 mb-8 lg:mb-0">
 					<h2 className="text-3xl md:text-4xl mb-4 lg:mb-10 text-black">

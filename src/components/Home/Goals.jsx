@@ -5,7 +5,7 @@ import Icon4 from "../../assets/home/goals/icon4.png";
 
 const Goals = () => {
 	return (
-		<div className="w-full bg-white py-10 md:py-16">
+		<div className="w-full bg-white py-10 md:py-16 px-5 lg:px-16 xl:px-28">
 			<div className="container mx-auto px-6 md:px-8 text-center text-black">
 				<h2 className="text-3xl md:text-4xl mb-8 md:mb-12 font-medium">
 					Achieve Your Goals With Coursera

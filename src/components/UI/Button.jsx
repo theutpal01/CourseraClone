@@ -12,28 +12,29 @@ const Button = ({
 		"primary": `${
 			type == "outlined"
 				? "border-primary text-primary-dark hover:bg-primary/10"
-				: "border-primary bg-primary text-white hover:bg-primary-dark"
+				: `${type === "ghost" ? "hover:border-primary/20" : ""} border-primary bg-primary text-white hover:bg-primary-dark`
 		}`,
 		"secondary": `${
 			type == "outlined"
 				? "border-secondary text-secondary-dark hover:bg-secondary/10"
-				: "border-primary bg-secondary text-black hover:bg-secondary-dark"
+				: `${type === "ghost" ? "hover:border-secondary/20" : ""} border-secondary bg-secondary text-black hover:bg-secondary-dark`
 		}`,
 		"tertiary": `${
 			type == "outlined"
 				? "border-tertiary text-tertiary-dark hover:bg-tertiary/10"
-				: "border-primary bg-tertiary text-white hover:bg-tertiary-dark"
+				: `${type === "ghost" ? "hover:border-tertiary/20" : ""} border-tertiary bg-tertiary text-white hover:bg-tertiary-dark`
 		}`,
 		"light": `${
 			type == "outlined"
 				? "border-black text-black hover:bg-black/20"
-				: "border-primary bg-black text-white hover:bg-slate-900"
+				: `${type === "ghost" ? "hover:border-black/20" : ""} border-black bg-black text-white hover:bg-slate-900`
 		}`,
 	};
 
 	const types = {
 		"filled": "border-2",
 		"outlined": "border-2 bg-transparent",
+		"ghost" : "border-2 border-transparent"
 	};
 
 	const sizes = {
