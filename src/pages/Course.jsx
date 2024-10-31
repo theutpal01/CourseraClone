@@ -21,7 +21,13 @@ const Course = () => {
 			{course && (
 				<>
 					<Overview course={course} />
-					<CourseDetails />
+					<CourseDetails
+						details={{
+							learn: course.learn,
+							skills_covered: course.skills_covered,
+							certificate: course.certificate,
+						}}
+					/>
 				</>
 			)}
 			;

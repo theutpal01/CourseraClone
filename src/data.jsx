@@ -18,14 +18,8 @@ export const user = {
 	},
 	courses: {
 		recent: [],
-		ongoing: [
-			"60f5b704fc13ae34d201c703",
-			"60f5b704fc13ae34d201c701"
-		],
-		completed: [
-			"60f5b704fc13ae34d201c704",
-			"60f5b704fc13ae34d201c700"
-		],
+		ongoing: ["60f5b704fc13ae34d201c703", "60f5b704fc13ae34d201c701"],
+		completed: ["60f5b704fc13ae34d201c704", "60f5b704fc13ae34d201c700"],
 		recomended: [
 			"60f5b704fc13ae34d201c6f3",
 			"60f5b704fc13ae34d201c6f5",
@@ -55,6 +49,12 @@ export const courses = [
 			"Basic English communication",
 			"Workplace etiquette",
 			"Making and receiving phone calls",
+		],
+		learn: [
+			"Communicate effectively in basic workplace scenarios",
+			"Use appropriate language for making and receiving phone calls",
+			"Understand and follow workplace etiquette",
+			"Engage in simple conversations and interactions with colleagues",
 		],
 		instructors: [
 			{
@@ -101,6 +101,13 @@ export const courses = [
 			"Reinforcement learning",
 			"Data analysis",
 		],
+		learn: [
+			"Implement machine learning algorithms from scratch",
+			"Apply supervised and unsupervised learning techniques",
+			"Analyze and interpret data using statistical tools",
+			"Build models for data prediction and classification",
+			"Understand the foundations of reinforcement learning",
+		],
 		instructors: [
 			{
 				name: "Andrew Ng",
@@ -140,6 +147,13 @@ export const courses = [
 			"Statistical inference",
 			"Machine learning",
 			"Data visualization",
+		],
+		learn: [
+			"Analyze and visualize data using R programming",
+			"Apply statistical inference methods for data analysis",
+			"Implement machine learning algorithms for data-driven insights",
+			"Develop reproducible data science projects",
+			"Explore and clean data for real-world applications",
 		],
 		instructors: [
 			{
@@ -185,6 +199,12 @@ export const courses = [
 			"Mindfulness",
 			"Happiness strategies",
 		],
+		learn: [
+			"Understand the science behind happiness and well-being",
+			"Apply mindfulness techniques to enhance daily life",
+			"Develop personalized strategies for increased happiness",
+			"Identify and counteract common misconceptions about happiness",
+		],
 		instructors: [
 			{
 				name: "Laurie Santos",
@@ -221,6 +241,12 @@ export const courses = [
 		},
 		difficulty_level: "Beginner",
 		skills_covered: ["Python programming", "Data analysis", "Algorithm design"],
+		learn: [
+			"Write and understand Python code for solving computational problems",
+			"Develop algorithms to approach complex problem-solving",
+			"Analyze and visualize data using Python libraries",
+			"Apply foundational computer science concepts in programming",
+		],
 		instructors: [
 			{
 				name: "Eric Grimson",
@@ -266,6 +292,13 @@ export const courses = [
 			"Email marketing",
 			"Content strategy",
 		],
+		learn: [
+			"Develop and implement effective social media marketing strategies",
+			"Apply SEO techniques to improve online visibility",
+			"Create engaging content for various digital channels",
+			"Utilize analytics to optimize digital marketing campaigns",
+			"Design email marketing campaigns to boost customer engagement",
+		],
 		instructors: [
 			{
 				name: "Dhruv Grewal",
@@ -305,6 +338,12 @@ export const courses = [
 			"Behavioral psychology",
 			"Social psychology",
 		],
+		learn: [
+			"Understand the fundamental principles of psychology",
+			"Explore the biological basis of behavior and cognition",
+			"Analyze psychological research and its implications",
+			"Identify factors that influence human thought, emotion, and behavior",
+		],
 		instructors: [
 			{
 				name: "Paul Bloom",
@@ -343,6 +382,12 @@ export const courses = [
 			"AI concepts",
 			"Business applications of AI",
 			"Ethics in AI",
+		],
+		learn: [
+			"Understand the basics of artificial intelligence and machine learning",
+			"Identify the potential of AI in transforming business operations",
+			"Evaluate ethical concerns and societal impacts of AI",
+			"Communicate effectively with AI professionals and stakeholders",
 		],
 		instructors: [
 			{
@@ -384,6 +429,12 @@ export const courses = [
 			"Risk management",
 			"Market analysis",
 		],
+		learn: [
+			"Understand the fundamental principles of financial markets",
+			"Identify key investment strategies and risk management techniques",
+			"Analyze different types of financial instruments",
+			"Evaluate the economic impact of financial markets on a global scale",
+		],
 		instructors: [
 			{
 				name: "Robert Shiller",
@@ -419,6 +470,12 @@ export const courses = [
 		},
 		difficulty_level: "Beginner",
 		skills_covered: ["JavaScript basics", "Problem-solving", "Web development"],
+		learn: [
+			"Write and understand basic JavaScript code",
+			"Develop problem-solving skills using programming logic",
+			"Create simple web applications using JavaScript",
+			"Understand foundational programming concepts such as variables, loops, and functions",
+		],
 		instructors: [
 			{
 				name: "Charles Severance",
@@ -457,6 +514,12 @@ export const courses = [
 			"Graphic design principles",
 			"Visual communication",
 			"Adobe Photoshop",
+		],
+		learn: [
+			"Understand and apply the principles of graphic design",
+			"Utilize typography effectively in design projects",
+			"Master color theory and its application in visual design",
+			"Create compelling visual compositions using Adobe Photoshop",
 		],
 		instructors: [
 			{
@@ -497,6 +560,12 @@ export const courses = [
 			"Agile development",
 			"User-centered design",
 		],
+		learn: [
+			"Understand the digital product lifecycle from conception to launch",
+			"Apply agile development principles to product management",
+			"Utilize user-centered design techniques to create effective products",
+			"Measure product success using key performance indicators (KPIs)",
+		],
 		instructors: [
 			{
 				name: "Christian Terwiesch",
@@ -536,6 +605,12 @@ export const courses = [
 			"Security protocols",
 			"Risk management",
 		],
+		learn: [
+			"Understand the fundamentals of network security and its importance",
+			"Learn about cryptography and its applications in securing data",
+			"Develop skills for assessing and managing security risks",
+			"Gain insights into various security protocols and their implementations",
+		],
 		instructors: [
 			{
 				name: "R. Kevin McCarthy",
@@ -571,6 +646,12 @@ export const courses = [
 		},
 		difficulty_level: "Beginner",
 		skills_covered: ["Python programming", "Data manipulation", "Web scraping"],
+		learn: [
+			"Fundamentals of Python programming and syntax",
+			"How to manipulate and analyze data using Python",
+			"Techniques for web scraping and working with APIs",
+			"Basic concepts of data visualization and reporting",
+		],
 		instructors: [
 			{
 				name: "Charles Severance",
@@ -606,6 +687,12 @@ export const courses = [
 		},
 		difficulty_level: "Intermediate",
 		skills_covered: ["Quantum mechanics", "Quantum algorithms", "Cryptography"],
+		learn: [
+			"Basic principles of quantum mechanics and their relevance to computing",
+			"Understanding quantum algorithms and their advantages",
+			"Applications of quantum computing in cryptography and data security",
+			"Exploration of current research and developments in quantum technology",
+		],
 		instructors: [
 			{
 				name: "John Preskill",
@@ -645,6 +732,12 @@ export const courses = [
 			"Data visualization",
 			"Statistical inference",
 		],
+		learn: [
+			"Fundamental concepts of data science and its applications",
+			"Techniques for data collection and cleaning",
+			"Data visualization tools and methodologies",
+			"Statistical methods for data analysis and interpretation",
+		],
 		instructors: [
 			{
 				name: "Marta N. N. Mendes",
@@ -680,6 +773,12 @@ export const courses = [
 			"Epidemiology",
 			"Contact tracing",
 			"Public health strategies",
+		],
+		learn: [
+			"Fundamentals of contact tracing and its importance in public health",
+			"Methods and techniques used in effective contact tracing",
+			"Understanding the role of contact tracing in controlling the spread of COVID-19",
+			"Ethical considerations and privacy concerns in contact tracing",
 		],
 		instructors: [
 			{
@@ -717,6 +816,12 @@ export const courses = [
 			"Machine learning concepts",
 			"AI applications",
 		],
+		learn: [
+			"Basic concepts of artificial intelligence and machine learning",
+			"Real-world applications of AI across various industries",
+			"Impact of AI on society and ethical considerations",
+			"How to think about AI in a business context",
+		],
 		instructors: [
 			{
 				name: "Andrew Ng",
@@ -753,6 +858,12 @@ export const courses = [
 			"Behavioral science",
 			"Habit formation",
 		],
+		learn: [
+			"Understanding the concepts of happiness and well-being",
+			"Strategies to improve mental health and life satisfaction",
+			"How to build and maintain positive habits",
+			"Evidence-based practices for increasing happiness",
+		],
 		instructors: [
 			{
 				name: "Laurie Santos",
@@ -788,6 +899,12 @@ export const courses = [
 			"Study techniques",
 			"Memory enhancement",
 			"Time management",
+		],
+		learn: [
+			"Techniques to improve learning efficiency",
+			"How to tackle procrastination and distractions",
+			"Strategies for better memory retention",
+			"Understanding the science behind how we learn",
 		],
 		instructors: [
 			{

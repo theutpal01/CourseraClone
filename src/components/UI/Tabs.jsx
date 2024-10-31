@@ -9,7 +9,7 @@ const Tabs = ({ className, variant = "primary", children }) => {
 	};
 
 	return (
-		<div className={`flex gap-5 w-full p-3 *:p-3 *:rounded *:font-medium text-sm ${variants[variant]} ${className}`}>
+		<div className={`flex gap-5 w-full py-3 *:p-3 *:rounded *:font-medium text-sm ${variants[variant]} ${className}`}>
 			{children}
 		</div>
 	);

@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
+import ScrollToTop from "./utils/ScrollToTop"
 import NavIndividual from "./components/Navigations/NavIndividual";
 import Footer from "./components/Base/Footer";
 import Home from "./pages/Home";
@@ -15,6 +16,7 @@ function App() {
 
 	return (
 		<Router>
+			<ScrollToTop />
 			<div className="mx-auto flex flex-col min-h-screen bg-white">
 				<Header tab={tab} setTab={setTab} />
 				<NavIndividual login={login} setLogin={setLogin} />
