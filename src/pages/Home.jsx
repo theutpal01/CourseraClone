@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Hero from "../components/Home/Hero";
 import Goals from "../components/Home/Goals";
 import Join from "../components/Home/Join";
-import Browse from "../components/Services/Browse";
+import Display from "../components/Services/Display";
 import Promote from "../components/Home/Promote";
 import Feature from "../components/Home/Feature";
 import Testimonial from "../components/Home/Testimonial";
@@ -27,7 +27,7 @@ const Home = ({ login }) => {
 
 			{login && (
 				<div>
-					<Browse />
+					<Display />
 				</div>
 			)}
 		</div>

@@ -76,7 +76,7 @@ function NavIndividual({ login, setLogin }) {
 			<nav
 				className={`${
 					direction === "down" ? "top-0" : "top-0 lg:top-9"
-				} sticky bg-white z-40 flex flex-col text-gray-500 transition-all duration-300 drop-shadow border-b border-gray-300 lg:px-16 xl:px-28 px-5`}
+				} sticky bg-white z-20 flex flex-col text-gray-500 transition-all duration-300 drop-shadow border-b border-gray-300 lg:px-16 xl:px-28 px-5`}
 			>
 				<div className="flex py-4 lg:py-2 gap-10 justify-between w-full">
 					{/* Logo and Explore Dropdown */}
@@ -204,7 +204,7 @@ function NavIndividual({ login, setLogin }) {
 
 									{/* Browse All Subjects Button */}
 									<NavLink
-										to="/home"
+										to="/courses"
 										className="block text-center py-2 px-4 bg-blue-600 text-white rounded hover:bg-blue-700"
 									>
 										Browse all subjects

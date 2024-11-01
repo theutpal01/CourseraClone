@@ -1,6 +1,6 @@
 import Card from '../UI/Card';
 
-function Browse() {
+function Display() {
     const sections = [
         { heading: "Recently Viewed Courses" },
         { heading: "Most Popular Certificates" },
@@ -18,7 +18,7 @@ function Browse() {
     ];
 
     return (
-        <div className="p-8">
+        <div className="flex flex-col gap-5 px-5 lg:px-16 xl:px-28 py-10">
             {sections.map((section, index) => (
                 <div key={index} className="mb-12">
                     <h2 className="text-2xl font-semibold text-slate-800 mb-4">{section.heading}</h2>
@@ -34,4 +34,4 @@ function Browse() {
     );
 }
 
-export default Browse;
+export default Display;

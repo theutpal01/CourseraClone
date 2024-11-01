@@ -26,11 +26,11 @@ function MyLearning({ login }) {
 	return (
 		<>
 			{login && (
-				<div className="p-8">
+				<div className="flex flex-col gap-5 px-5 lg:px-16 xl:px-28 py-10">
 					<h1 className="text-3xl text-slate-800 font-bold">My Learning</h1>
 
 					{/* Buttons for "In Progress" and "Completed" */}
-					<div className="space-x-2 mt-3">
+					<div className="space-x-2">
 						<button
 							className={`btn ${
 								activeButton === "in-progress"

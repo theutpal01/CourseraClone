@@ -5,14 +5,13 @@ import { NavLink } from "react-router-dom";
 const Header = ({ tab, setTab }) => {
 	const direction = useScrollDirection()
 
-	console.log(direction)
 	const handleClick = (state) => {
 		setTab(state);
 	};
 	
 
 	return (
-		<div className={`${direction === "down" ? "top-0 lg:-top-9" : "top-0"} hidden h-9 lg:block sticky z-50 lg:px-16 xl:px-28 px-5 bg-black transition-all duration-300`}>
+		<div className={`${direction === "down" ? "top-0 lg:-top-9" : "top-0"} hidden h-9 lg:block sticky z-20 lg:px-16 xl:px-28 px-5 bg-black transition-all duration-300`}>
 			<div className="flex gap-4 *:p-1  *:text-white h-full *:font-normal *:border-b-4 *:transition-all *:duration-300">
 				<NavLink
 					to="/"

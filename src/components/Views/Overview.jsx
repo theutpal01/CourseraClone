@@ -4,7 +4,7 @@ import courseBG from "../../assets/courses/course-bg.png";
 
 const Overview = ({ course }) => {
 	return (
-		<div className="relative bg-slate-200 lg:h-[550px] flex flex-col justify-center ">
+		<div className="relative bg-primary/5 lg:h-[550px] flex flex-col justify-center ">
 			<div className="flex flex-col gap-3 py-10 px-5 lg:px-16 xl:px-28">
 				<h2 className="text-neutral text-4xl font-bold max-w-4xl z-10">
 					{course.course_title}

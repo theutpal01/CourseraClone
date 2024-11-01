@@ -17,7 +17,14 @@ export const user = {
 		relocate: null,
 	},
 	courses: {
-		recent: [],
+		recent: [
+			"60f5b704fc13ae34d201c6f6",
+			"60f5b704fc13ae34d201c6f3",
+			"60f5b704fc13ae34d201c6f7",
+			"60f5b704fc13ae34d201c706",
+			"60f5b704fc13ae34d201c700",
+			"60f5b704fc13ae34d201c702",
+		],
 		ongoing: ["60f5b704fc13ae34d201c703", "60f5b704fc13ae34d201c701"],
 		completed: ["60f5b704fc13ae34d201c704", "60f5b704fc13ae34d201c700"],
 		recomended: [
@@ -34,6 +41,8 @@ export const courses = [
 		id: "60f5b704fc13ae34d201c6f3",
 		course_title:
 			"English for Common Interactions in the Workplace: Basic Level",
+		course_cover:
+			"https://cdni.iconscout.com/illustration/premium/thumb/english-language-course-illustration-download-in-svg-png-gif-file-formats--courses-class-learning-school-pack-education-illustrations-5319568.png",
 		platform: "Coursera",
 		url: "https://www.coursera.org/learn/english-common-interactions-workplace-basic-level",
 		description:
@@ -84,6 +93,8 @@ export const courses = [
 	{
 		id: "60f5b704fc13ae34d201c6f4",
 		course_title: "Machine Learning",
+		course_cover:
+			"https://cdn.shopaccino.com/igmguru/products/machine-learning-training-igmguru_1499895199_l.jpg?v=462",
 		platform: "Coursera",
 		url: "https://www.coursera.org/learn/machine-learning",
 		description:
@@ -131,6 +142,7 @@ export const courses = [
 	{
 		id: "60f5b704fc13ae34d201c6f5",
 		course_title: "Data Science Specialization",
+		course_cover: "https://www.cdmi.in/courses@2x/data-science.webp",
 		platform: "Coursera",
 		url: "https://www.coursera.org/specializations/jhu-data-science",
 		description:
@@ -183,6 +195,8 @@ export const courses = [
 	{
 		id: "60f5b704fc13ae34d201c6f6",
 		course_title: "The Science of Well-Being",
+		course_cover:
+			"https://www.parenthub.co.uk/app/uploads/2017/02/Wellbeing.jpg",
 		platform: "Coursera",
 		url: "https://www.coursera.org/learn/the-science-of-well-being",
 		description:
@@ -229,6 +243,7 @@ export const courses = [
 		id: "60f5b704fc13ae34d201c6f7",
 		course_title:
 			"Introduction to Computer Science and Programming Using Python",
+		course_cover: "https://img-c.udemycdn.com/course/750x422/433798_1de9_4.jpg",
 		platform: "Coursera",
 		url: "https://www.coursera.org/learn/python",
 		description:
@@ -275,6 +290,8 @@ export const courses = [
 	{
 		id: "60f5b704fc13ae34d201c6f8",
 		course_title: "Digital Marketing Specialization",
+		course_cover:
+			"https://courses.iid.org.in/public//uploads/media_manager/628.jpg",
 		platform: "Coursera",
 		url: "https://www.coursera.org/specializations/digital-marketing",
 		description:
@@ -322,6 +339,8 @@ export const courses = [
 	{
 		id: "60f5b704fc13ae34d201c6f9",
 		course_title: "Introduction to Psychology",
+		course_cover:
+			"https://cognizavest.com/wp-content/uploads/2024/05/image-4.webp",
 		platform: "Coursera",
 		url: "https://www.coursera.org/learn/psychology",
 		description:
@@ -367,6 +386,8 @@ export const courses = [
 	{
 		id: "60f5b704fc13ae34d201c6fa",
 		course_title: "Artificial Intelligence for Everyone",
+		course_cover:
+			"https://cdn.prod.website-files.com/62d9b9c78f111f03f778e150/66a75fa901284db3241a196c_Hero%20image%20AI.png",
 		platform: "Coursera",
 		url: "https://www.coursera.org/learn/ai-for-everyone",
 		description:
@@ -412,6 +433,8 @@ export const courses = [
 	{
 		id: "60f5b704fc13ae34d201c6fb",
 		course_title: "Financial Markets",
+		course_cover:
+			"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNVczzOH_FugLgszNyWTPBtkkglITW4HpW3w&s",
 		platform: "Coursera",
 		url: "https://www.coursera.org/learn/financial-markets",
 		description:
@@ -458,6 +481,8 @@ export const courses = [
 	{
 		id: "60f5b704fc13ae34d201c6fc",
 		course_title: "Programming for Everybody (Getting Started with JavaScript)",
+		course_cover:
+			"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRybbqWd_lLJD3kBBXYKIJDn_bZLKQ9MTNI8g&s",
 		platform: "Coursera",
 		url: "https://www.coursera.org/learn/javascript",
 		description:
@@ -499,6 +524,8 @@ export const courses = [
 	{
 		id: "60f5b704fc13ae34d201c6fd",
 		course_title: "Graphic Design Specialization",
+		course_cover:
+			"https://images.shiksha.com/mediadata/images/articles/1717577137phptbycRI.jpeg",
 		platform: "Coursera",
 		url: "https://www.coursera.org/specializations/graphic-design",
 		description:
@@ -544,6 +571,8 @@ export const courses = [
 	{
 		id: "60f5b704fc13ae34d201c6fe",
 		course_title: "Digital Product Management",
+		course_cover:
+			"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM66O-hsDHwaHDKu1Istx44s_ONnG-4s2K7w&s",
 		platform: "Coursera",
 		url: "https://www.coursera.org/learn/digital-product-management",
 		description:
@@ -589,6 +618,8 @@ export const courses = [
 	{
 		id: "60f5b704fc13ae34d201c6ff",
 		course_title: "Cybersecurity Specialization",
+		course_cover:
+			"https://media.istockphoto.com/id/1339203360/photo/cyber-security-inscription-against-laptop-and-code.jpg?s=612x612&w=0&k=20&c=Tf9AB_vCLVO40ocTWRHN8DUDW5B9vSgtAxG1kRkWlJM=",
 		platform: "Coursera",
 		url: "https://www.coursera.org/specializations/cyber-security",
 		description:
@@ -634,6 +665,8 @@ export const courses = [
 	{
 		id: "60f5b704fc13ae34d201c700",
 		course_title: "Python for Everybody",
+		course_cover:
+			"https://d3s1xydsbc15sr.cloudfront.net/media/elearning/skill/Python-min.jpg",
 		platform: "Coursera",
 		url: "https://www.coursera.org/specializations/python",
 		description:
@@ -675,6 +708,8 @@ export const courses = [
 	{
 		id: "60f5b704fc13ae34d201c701",
 		course_title: "Introduction to Quantum Computing",
+		course_cover:
+			"https://elearn.nptel.ac.in/wp-content/uploads/2024/02/Quantum-Computing-580x309.jpg",
 		platform: "Coursera",
 		url: "https://www.coursera.org/learn/quantum-computing",
 		description:
@@ -716,6 +751,8 @@ export const courses = [
 	{
 		id: "60f5b704fc13ae34d201c702",
 		course_title: "Introduction to Data Science",
+		course_cover:
+			"https://nearlearn.com/public/images/data-science-python-course-in-bangalore.jpg",
 		platform: "Coursera",
 		url: "https://www.coursera.org/learn/data-science",
 		description:
@@ -758,6 +795,8 @@ export const courses = [
 	{
 		id: "60f5b704fc13ae34d201c703",
 		course_title: "COVID-19 Contact Tracing",
+		course_cover:
+			"https://d2jx2rerrg6sh3.cloudfront.net/image-handler/picture/2020/6/shutterstock_1710910393.jpg",
 		platform: "Coursera",
 		url: "https://www.coursera.org/learn/covid-19-contact-tracing",
 		description:
@@ -800,6 +839,8 @@ export const courses = [
 	{
 		id: "60f5b704fc13ae34d201c704",
 		course_title: "AI For Everyone",
+		course_cover:
+			"https://cdn.prod.website-files.com/62d9b9c78f111f03f778e150/66a75fa901284db3241a196c_Hero%20image%20AI.png",
 		platform: "Coursera",
 		url: "https://www.coursera.org/learn/ai-for-everyone",
 		description:
@@ -842,6 +883,8 @@ export const courses = [
 	{
 		id: "60f5b704fc13ae34d201c705",
 		course_title: "The Science of Well-Being",
+		course_cover:
+			"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/de/e250c02c7f11e4a56e09598f8b6c89/PFA.png",
 		platform: "Coursera",
 		url: "https://www.coursera.org/learn/the-science-of-well-being",
 		description:
@@ -884,6 +927,8 @@ export const courses = [
 	{
 		id: "60f5b704fc13ae34d201c706",
 		course_title: "Learning How to Learn",
+		course_cover:
+			"https://images.ctfassets.net/aq13lwl6616q/6VWcUgLgG0SU55ORlILe2S/e186361aeb48561bcd19ae6486577022/Learning_to_Learn.jpg",
 		platform: "Coursera",
 		url: "https://www.coursera.org/learn/learning-how-to-learn",
 		description:

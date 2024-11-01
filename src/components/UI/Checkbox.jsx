@@ -2,7 +2,7 @@ import React from "react";
 
 const Checkbox = ({ name, text }) => {
 	return (
-		<label className="inline-flex items-center gap-2 cursor-pointer">
+		<label className="inline-flex items-center gap-2 cursor-pointer w-fit">
 			<div className="relative flex">
 				<input
 					id={name}

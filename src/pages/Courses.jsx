@@ -1,11 +1,12 @@
 import React from "react";
 import FilterGroup from "../components/Search/FilterGroup";
 import DisplayData from "../components/Search/DisplayData";
+import { courses } from "../data";
 
 const Courses = () => {
 	return (
-		<div className="flex min-h-screen">
-			<div className="p-5 px-20 max-w-sm w-full">
+		<div className="flex min-h-screen mt-10 px-5 lg:px-16 xl:px-28">
+			<div className="hidden lg:block py-5 max-w-48 xl:max-w-80 w-full">
 				<h2 className="text-xl text-neutral font-medium">Filter by</h2>
 				<FilterGroup
 					heading="Levels"
@@ -42,8 +43,8 @@ const Courses = () => {
 					options={["Beginner", "Intermediate", "Advanced", "Free"]}
 				/>
 			</div>
-			<div className="flex-grow flex flex-col gap-5 p-5">
-				<DisplayData />
+			<div className="flex-grow flex flex-col gap-5 py-5">
+				<DisplayData data={courses} />
 			</div>
 		</div>
 	);
