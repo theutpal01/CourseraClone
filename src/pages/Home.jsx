@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
+import { UserContext } from "../contexts/UserContext";
 import Hero from "../components/Home/Hero";
 import Goals from "../components/Home/Goals";
 import Join from "../components/Home/Join";
@@ -7,14 +8,16 @@ import Promote from "../components/Home/Promote";
 import Feature from "../components/Home/Feature";
 import Testimonial from "../components/Home/Testimonial";
 
-const Home = ({ login }) => {
+const Home = () => {
+	const { user } = useContext(UserContext);
 	useEffect(() => {
+		console.log(user)
 		window.scrollTo(0, 0);
-	}, [login]);
-	
+	}, [user]);
+
 	return (
 		<div>
-			{!login && (
+			{!user && (
 				<div>
 					<Hero />
 					<Goals />
@@ -25,7 +28,7 @@ const Home = ({ login }) => {
 				</div>
 			)}
 
-			{login && (
+			{user && (
 				<div>
 					<Display />
 				</div>

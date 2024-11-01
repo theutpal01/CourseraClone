@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { UserContext } from "../contexts/UserContext";
 import Image from "../assets/codingteam.jpg";
 
-function MyLearning({ login }) {
+function MyLearning() {
+	const {user} = useContext(UserContext);
 	const [activeButton, setActiveButton] = useState("in-progress"); // State to track active button
 
 	// Sample course data
@@ -25,7 +27,7 @@ function MyLearning({ login }) {
 
 	return (
 		<>
-			{login && (
+			{user && (
 				<div className="flex flex-col gap-5 px-5 lg:px-16 xl:px-28 py-10">
 					<h1 className="text-3xl text-slate-800 font-bold">My Learning</h1>
 

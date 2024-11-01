@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import { useLocation } from "react-router-dom";
-import Coursera from "../../assets/base/coursera.png";
 import { FiMenu, FiX } from "react-icons/fi";
 import {
 	LuChevronDown,
@@ -11,11 +10,15 @@ import {
 	LuBell,
 	LuUser,
 } from "react-icons/lu";
-import { useScrollDirection } from "../../hooks/useScrollDirection";
+import Coursera from "../../assets/base/coursera.png";
+import { user as userInfo } from "../../data";
 import Button from "../UI/Button";
+import { useScrollDirection } from "../../hooks/useScrollDirection";
+import { UserContext } from "../../contexts/UserContext";
 
-function NavIndividual({ login, setLogin }) {
+function NavIndividual() {
 	const location = useLocation();
+	const { user, setUser } = useContext(UserContext);
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const [languageDropdown, setLanguageDropdown] = useState(false);
@@ -62,12 +65,12 @@ function NavIndividual({ login, setLogin }) {
 	};
 
 	const handleLogout = () => {
-		setLogin(false); // Set logged out state
+		setUser(null); // Set logged out state
 		setProfileDropdown(false); // Close profile dropdown
 	};
 
 	const handleLogin = () => {
-		setLogin(true); // Reset logged out state
+		setUser(userInfo); // Reset logged out state
 		setIsMobileMenuOpen(false); // Close mobile menu if it's open
 	};
 
@@ -229,7 +232,7 @@ function NavIndividual({ login, setLogin }) {
 					</div>
 
 					<div className="hidden lg:flex gap-3 items-center">
-						{!login ? (
+						{!user ? (
 							// Display links when logged out
 							<>
 								<NavLink to="/" className="text-sm hover:text-gray-700">
@@ -350,7 +353,7 @@ function NavIndividual({ login, setLogin }) {
 				</div>
 
 				<div>
-					{login && ["/", "/my-learning"].includes(location.pathname) ? (
+					{user && ["/", "/my-learning"].includes(location.pathname) ? (
 						<>
 							{/* New Row with Home and My Learning Links in a new line */}
 							<div className="flex justify-start gap-5 *:transition-all *:duration-300 *:border-b-4 *:py-2 *:px-4 hover:*:text-primary">
@@ -384,7 +387,7 @@ function NavIndividual({ login, setLogin }) {
 
 			{isMobileMenuOpen && (
 				<div className="lg:hidden bg-white shadow-md p-4">
-					{!login ? (
+					{!user ? (
 						<>
 							<NavLink to="/" className="block py-2 hover:text-gray-700">
 								For Enterprise
