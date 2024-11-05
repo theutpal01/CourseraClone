@@ -1,5 +1,5 @@
 import CourseCard from "../Views/CourseCard";
-import Pagination from "../Base/Pagination";
+import Pagination from "../UI/Pagination";
 import { useEffect, useState } from "react";
 
 const DisplayData = ({ data }) => {
@@ -27,7 +27,7 @@ const DisplayData = ({ data }) => {
 
 	return (
 		<>
-			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mx-auto">
+			<div className="grid grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-3 gap-10 mx-auto py-3">
 				{!loading &&
 					currentPosts.map((course) => (
 						<CourseCard key={course.id} course={course} />

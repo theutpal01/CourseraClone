@@ -5,7 +5,7 @@ const Button = ({
 	variant = "light",
 	size = "md",
 	className,
-	onCLick,
+	onClick,
 	children,
 }) => {
 	const variants = {
@@ -54,6 +54,7 @@ const Button = ({
 	};
 
 	const sizes = {
+		xs: "text-xs p-1.5",
 		sm: "text-sm p-2",
 		md: "p-4",
 		lg: "text-lg p-5",
@@ -64,10 +65,8 @@ const Button = ({
 		<button
 			className={`${className ? className : ""} ${variants[variant]} ${
 				types[type]
-			} ${
-				sizes[size]
-			} text-neutral rounded w-fit active:scale-95 cursor-pointer transition-all duration-150`}
-			onClick={onCLick}
+			} ${sizes[size]} text-neutral rounded w-fit active:scale-95 cursor-pointer transition-all duration-150`}
+			onClick={onClick}
 		>
 			{children}
 		</button>

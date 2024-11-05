@@ -1,6 +1,6 @@
 import { FaStar, FaThumbsUp } from "react-icons/fa";
-import Button from "../UI/Button";
-import courseBG from "../../assets/courses/course-bg.png";
+import Button from "../../UI/Button";
+import courseBG from "../../../assets/courses/course-bg.png";
 
 const Overview = ({ course }) => {
 	return (

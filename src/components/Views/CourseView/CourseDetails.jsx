@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Tabs from "../UI/Tabs";
+import Tabs from "../../UI/Tabs";
 import { NavLink } from "react-router-dom";
-import { FaCertificate, FaCheck, FaLinkedin, FaTasks } from "react-icons/fa";
+import { FaLinkedin, FaTasks } from "react-icons/fa";
 import { BiCheck } from "react-icons/bi";
 import { GrCertificate } from "react-icons/gr";
 import { HiOutlineChatBubbleLeftEllipsis } from "react-icons/hi2";
@@ -51,6 +51,15 @@ const CourseDetails = ({ details }) => {
 								<BiCheck className="text-xl" />
 								<p>{item}</p>
 							</div>
+						))}
+					</div>
+				</div>
+
+				<div className="text-neutral py-5">
+					<h2 className="font-semibold text-lg">Skills you'll gain</h2>
+					<div className="flex flex-wrap gap-2 py-2">
+						{details.skills_covered.map((item, index) => (
+								<p key={index} className="bg-black/15 text-sm py-2 px-3 rounded-badge">{item}</p>
 						))}
 					</div>
 				</div>

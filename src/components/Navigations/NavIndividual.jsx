@@ -16,7 +16,7 @@ import Button from "../UI/Button";
 import { useScrollDirection } from "../../hooks/useScrollDirection";
 import { UserContext } from "../../contexts/UserContext";
 
-function NavIndividual() {
+function NavIndividual({setLogin, setRegister}) {
 	const location = useLocation();
 	const { user, setUser } = useContext(UserContext);
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -70,9 +70,15 @@ function NavIndividual() {
 	};
 
 	const handleLogin = () => {
+		setLogin(true);
 		setUser(userInfo); // Reset logged out state
 		setIsMobileMenuOpen(false); // Close mobile menu if it's open
 	};
+
+	const handleRegister = () => {
+		setRegister(true);
+		setIsMobileMenuOpen(false); // Close mobile menu if it's open
+	}
 
 	return (
 		<>
@@ -81,7 +87,7 @@ function NavIndividual() {
 					direction === "down" ? "top-0" : "top-0 lg:top-9"
 				} sticky bg-white z-20 flex flex-col text-gray-500 transition-all duration-300 drop-shadow border-b border-gray-300 lg:px-16 xl:px-28 px-5`}
 			>
-				<div className="flex py-4 lg:py-2 gap-10 justify-between w-full">
+				<div className="flex py-4 lg:py-3 gap-10 justify-between w-full">
 					{/* Logo and Explore Dropdown */}
 					<div className="flex items-center flex-grow">
 						<NavLink to="/" className="text-xl font-bold">
@@ -97,7 +103,7 @@ function NavIndividual() {
 								variant="primary"
 								type="outlined"
 								size="sm"
-								onCLick={toggleDropdown}
+								onClick={toggleDropdown}
 								className="flex gap-2 items-center"
 							>
 								Explore
@@ -220,10 +226,10 @@ function NavIndividual() {
 							<input
 								type="text"
 								placeholder="What do you want to learn?"
-								className="pl-3 py-2 bg-white border border-gray-300 rounded-full focus:outline-none focus:border-blue-500 w-full"
+								className="pl-3 py-2 bg-white border border-gray-300 rounded-full focus:outline-none focus:border-primary w-full"
 							/>
 							<NavLink
-								className="absolute right-[4px] cursor-pointer hover:bg-blue-500/80 duration-300 transition-all bg-blue-500 rounded-full active:scale-90 text-white text-xl origin-center w-auto h-auto p-[8px]"
+								className="absolute right-[0.75px] cursor-pointer hover:bg-primary/80 duration-300 transition-all bg-primary rounded-full active:scale-90 text-white text-xl origin-center w-auto h-auto p-[10px]"
 								to={"/search"}
 							>
 								<LuSearch />
@@ -249,7 +255,7 @@ function NavIndividual() {
 									Log In
 								</NavLink>
 								<NavLink to="/">
-									<Button variant="primary" size="sm" className="font-medium">
+									<Button variant="primary" size="sm" className="font-medium" onClick={handleRegister}>
 										Join for Free
 									</Button>
 								</NavLink>
@@ -402,7 +408,7 @@ function NavIndividual() {
 							>
 								Log In
 							</NavLink>
-							<NavLink to="/" className="block py-2 hover:text-gray-700">
+							<NavLink to="/" className="block py-2 hover:text-gray-700" onClick={handleRegister}>
 								Join for Free
 							</NavLink>
 						</>

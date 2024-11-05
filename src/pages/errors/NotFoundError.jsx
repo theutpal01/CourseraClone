@@ -7,7 +7,7 @@ const NotFoundError = () => {
 	return (
 		<div className="w-auto h-screen overflow-y-hidden">
 			<ErrorNav />
-			<div className="flex flex-col justify-center bg-gray-100 h-full px-16 gap-24">
+			<div className="flex flex-col pt-20 bg-gray-100 h-full px-16 gap-24">
 				<div className="max-w-3xl w-full mx-auto flex">
 					<Error404 />
 				</div>

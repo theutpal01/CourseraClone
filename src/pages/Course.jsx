@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { courses } from "../data";
-import Overview from "../components/Views/Overview";
-import CourseDetails from "../components/Views/CourseDetails";
+import Overview from "../components/Views/CourseView/Overview";
+import CourseDetails from "../components/Views/CourseView/CourseDetails";
 
 const Course = () => {
 	const [course, setCourse] = useState(null);

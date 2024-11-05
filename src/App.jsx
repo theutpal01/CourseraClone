@@ -8,9 +8,11 @@ import Course from "./pages/Course";
 import Contact from "./components/Services/Contact";
 import NotFoundError from "./pages/errors/NotFoundError";
 import PageLayout from "./PageLayout";
+import Search from "./pages/Search";
+import Business from "./pages/business";
+import University from "./pages/University";
 
 function App() {
-	const login = true;
 	return (
 		<Router>
 			<ScrollToTop />
@@ -19,8 +21,11 @@ function App() {
 					<Route element={<PageLayout />}>
 						<Route path="/" element={<Home />} />
 						<Route path="/my-learning" element={<MyLearning />} />
-						<Route path="/courses" element={<Courses />} />
+						<Route path="/business" element={<Business />} />
+						<Route path="/campus" element={<University />} />
 						<Route path="/contact" element={<Contact />} />
+						<Route path="/search" element={<Search />} />
+						<Route path="/courses" element={<Courses />} />
 						<Route path="courses/:id" element={<Course />} />
 					</Route>
 					<Route path="*" element={<NotFoundError />} />

@@ -1,9 +1,10 @@
 import { useState, useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
 import Image from "../assets/codingteam.jpg";
+import Badge from "../components/UI/Badge";
 
 function MyLearning() {
-	const {user} = useContext(UserContext);
+	const { user } = useContext(UserContext);
 	const [activeButton, setActiveButton] = useState("in-progress"); // State to track active button
 
 	// Sample course data
@@ -30,31 +31,22 @@ function MyLearning() {
 			{user && (
 				<div className="flex flex-col gap-5 px-5 lg:px-16 xl:px-28 py-10">
 					<h1 className="text-3xl text-slate-800 font-bold">My Learning</h1>
-
-					{/* Buttons for "In Progress" and "Completed" */}
-					<div className="space-x-2">
-						<button
-							className={`btn ${
-								activeButton === "in-progress"
-									? "bg-gray-500 text-white"
-									: "bg-white text-gray-500"
-							} rounded-full`}
+					<div className="flex gap-2">
+						<Badge
+							size="sm"
+							active={activeButton === "in-progress"}
 							onClick={() => setActiveButton("in-progress")}
 						>
 							In Progress
-						</button>
-						<button
-							className={`btn ${
-								activeButton === "completed"
-									? "bg-gray-500 text-white"
-									: "bg-white text-gray-500"
-							} rounded-full`}
+						</Badge>
+						<Badge
+							active={activeButton === "completed"}
+							size="sm"
 							onClick={() => setActiveButton("completed")}
 						>
 							Completed
-						</button>
+						</Badge>
 					</div>
-
 					{/* Course cards based on the active button */}
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8">
 						{activeButton === "in-progress" &&

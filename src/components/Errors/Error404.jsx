@@ -3,7 +3,7 @@ import React from "react";
 const Error404 = () => {
 	return (
 			<svg
-				className="w-[80vw] h-[350px] my-0 mx-auto max-w-[700px] overflow-visible"
+				className="w-[80vw]  pl-[20px] h-[350px] my-0 mx-auto max-w-[700px] overflow-visible"
 				viewBox="0 0 560 208"
 				version="1.1"
 				xmlns="http://www.w3.org/2000/svg"
