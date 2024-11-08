@@ -1,17 +1,17 @@
 import { NavLink } from "react-router-dom";
-import NextStep from "../../assets/home/join/nextstep.png"
+import NextStep from "../../assets/home/join/nextstep.png";
 import BulkLogo from "../../assets/home/join/bulklogo.png";
 import Button from "../UI/Button";
 
 const Join = () => {
 	return (
 		<>
-			<div className="container flex flex-col lg:flex-row items-center justify-center text-center lg:text-left gap-20 px-5 lg:px-16 xl:px-28 py-28 bg-yellow-50">
-				<div className="w-full lg:w-1/2 flex mb-8 lg:mb-0">
+			<div className="container flex flex-col lg:flex-row items-center justify-center text-center lg:text-left gap-8 px-5 lg:px-16 xl:px-28 py-28 bg-yellow-50">
+				<div className="w-full lg:w-1/2 flex mb-8 lg:mb-0 justify-center">
 					<img
 						src={NextStep}
 						alt="Next Step Image"
-						className="w-auto h-auto lg:max-h-96 rounded-lg"
+						className="w-full h-auto max-w-xs lg:max-w-md rounded-lg" // Adjusted for maximum width
 					/>
 				</div>
 				<div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
@@ -32,7 +32,7 @@ const Join = () => {
 			</div>
 
 			{/* Coursera for Business Section */}
-			<div className="container flex flex-col lg:flex-row items-center justify-between text-center lg:text-left gap-16 px-5 lg:px-16 xl:px-28 py-28">
+			<div className="container flex flex-col lg:flex-row items-center justify-between text-center lg:text-left gap-8 px-5 lg:px-16 xl:px-28 py-28">
 				{/* Text Content */}
 				<div className="w-full lg:w-1/2 mb-8 lg:mb-0">
 					<h2 className="text-3xl md:text-4xl mb-4 lg:mb-10 text-black">
@@ -57,7 +57,7 @@ const Join = () => {
 					<img
 						src={BulkLogo}
 						alt="Coursera for Business Logo"
-						className="w-auto h-auto lg:max-h-64 rounded-lg"
+						className="w-full h-auto max-w-xs lg:max-w-md rounded-lg" // Adjusted for maximum width
 					/>
 				</div>
 			</div>

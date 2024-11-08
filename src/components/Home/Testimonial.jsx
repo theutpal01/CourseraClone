@@ -1,7 +1,7 @@
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import user1 from "../../assets/home/testimonial/user1.png"
-import user2 from "../../assets/home/testimonial/user2.png"
-import user3 from "../../assets/home/testimonial/user3.png"
+import user1 from "../../assets/home/testimonial/user1.png";
+import user2 from "../../assets/home/testimonial/user2.png";
+import user3 from "../../assets/home/testimonial/user3.png";
 
 const Testimonial = () => {
 	return (
@@ -15,15 +15,15 @@ const Testimonial = () => {
 
 			{/* Testimonials Section with Chevron Arrows */}
 			<div className="flex flex-col items-center mb-10">
-				<div className="flex items-center space-x-6 justify-center">
+				<div className="flex items-center space-x-6 justify-center flex-wrap"> {/* Added flex-wrap for responsive behavior */}
 					{/* Left Chevron */}
 					<button className="p-2">
 						<FiChevronLeft className="text-blue-500 w-10 h-10" />
 					</button>
 
 					{/* Testimonials */}
-					<div className="flex flex-row space-x-20">
-						<div className="flex flex-col items-center w-60 p-4 text-center">
+					<div className="flex flex-col md:flex-row md:space-x-10 space-y-10 md:space-y-0"> {/* Adjusted layout for medium screens */}
+						<div className="flex flex-col items-center w-full max-w-xs p-4 text-center"> {/* Changed width to be responsive */}
 							<img
 								src={user1}
 								alt="User 1"
@@ -41,11 +41,11 @@ const Testimonial = () => {
 							</p>
 						</div>
 
-						<div className="flex flex-col items-center w-60 p-4 text-center">
+						<div className="flex flex-col items-center w-full max-w-xs p-4 text-center">
 							<img
 								src={user2}
 								alt="User 2"
-								className="w-30 h-24 rounded-full border-2 border-gray-300"
+								className="w-24 h-24 rounded-full border-2 border-gray-300"
 							/>
 							<h3 className="mt-4 text-blue-700 font-medium">Kara A.</h3>
 							<p className="text-sm text-gray-700 font-calibri font-bold">
@@ -61,7 +61,7 @@ const Testimonial = () => {
 							</p>
 						</div>
 
-						<div className="flex flex-col items-center w-60 p-4 text-center">
+						<div className="flex flex-col items-center w-full max-w-xs p-4 text-center">
 							<img
 								src={user3}
 								alt="User 3"

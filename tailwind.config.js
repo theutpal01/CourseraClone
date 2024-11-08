@@ -19,7 +19,10 @@ export default {
 					light: "#C19AB1",
 					DEFAULT: "#AD7A99"
 				}
-			}
+			},
+			fontFamily: {
+				sans: ['Calibri', 'Open Sans', 'sans-serif'], // Add Calibri and Open Sans here
+			},
 		},
 	},
 	plugins: [require("daisyui")],

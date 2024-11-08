@@ -11,17 +11,17 @@ const CourseCard = ({ course }) => {
 
 	return (
 		<div
-			className="max-w-72 p-1 w-full rounded-xl overflow-hidden border-2 drop-shadow hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer"
+			className="max-w-xs md:max-w-md lg:max-w-lg p-2 w-full rounded-xl overflow-hidden border-2 drop-shadow hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer"
 			onClick={handleRedirect}
 		>
 			<div className="rounded-xl overflow-hidden m-2">
 				<img
 					src={""}
 					alt=""
-					className="h-44 w-full self-center object-contain"
+					className="h-44 w-full object-cover"
 				/>
 			</div>
-			<div className="px-5 py-2 flex flex-col min-h-44 justify-between">
+			<div className="px-4 py-2 flex flex-col min-h-44 justify-between">
 				<div className="text-neutral">
 					<h2 className="font-semibold leading-relaxed overflow-ellipsis line-clamp-2">
 						{course.course_title}

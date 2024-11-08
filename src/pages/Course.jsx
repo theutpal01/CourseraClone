@@ -17,7 +17,7 @@ const Course = () => {
 	}, [id]);
 
 	return (
-		<div className="min-h-screen">
+		<div className="min-h-screen p-4 md:p-8"> {/* Added padding for better spacing on small screens */}
 			{course && (
 				<>
 					<Overview course={course} />
@@ -30,7 +30,6 @@ const Course = () => {
 					/>
 				</>
 			)}
-			;
 		</div>
 	);
 };

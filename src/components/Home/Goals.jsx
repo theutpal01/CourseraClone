@@ -15,7 +15,7 @@ const Goals = () => {
 						<img
 							src={Icon1}
 							alt="Learn The Latest Skills"
-							className="h-20 md:h-24 mx-auto mb-4"
+							className="h-16 md:h-20 lg:h-24 mx-auto mb-4" // Adjust height for better responsiveness
 						/>
 						<h3 className="text-lg md:text-xl font-semibold mb-2">
 							Learn The Latest Skills
@@ -29,7 +29,7 @@ const Goals = () => {
 						<img
 							src={Icon2}
 							alt="Get Ready For a Career"
-							className="h-20 md:h-24 mx-auto mb-4"
+							className="h-16 md:h-20 lg:h-24 mx-auto mb-4" // Adjust height for better responsiveness
 						/>
 						<h3 className="text-lg md:text-xl font-semibold mb-2">
 							Get Ready For a Career
@@ -43,7 +43,7 @@ const Goals = () => {
 						<img
 							src={Icon3}
 							alt="Earn a Degree"
-							className="h-20 md:h-24 mx-auto mb-4"
+							className="h-16 md:h-20 lg:h-24 mx-auto mb-4" // Adjust height for better responsiveness
 						/>
 						<h3 className="text-lg md:text-xl font-semibold mb-2">
 							Earn a Degree
@@ -57,7 +57,7 @@ const Goals = () => {
 						<img
 							src={Icon4}
 							alt="Upskill Your Organization"
-							className="h-20 md:h-24 mx-auto mb-4"
+							className="h-16 md:h-20 lg:h-24 mx-auto mb-4" // Adjust height for better responsiveness
 						/>
 						<h3 className="text-lg md:text-xl font-semibold mb-2">
 							Upskill Your Organization

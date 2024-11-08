@@ -15,7 +15,7 @@ const CourseDetails = ({ details }) => {
 
 	return (
 		<div>
-			<div className="mt-5 lg:mt-20 lg:w-2/3 px-5 lg:px-16 xl:px-28">
+			<div className="mt-5 lg:mt-20 mx-auto lg:w-2/3 px-4 sm:px-5 lg:px-16 xl:px-28">
 				<Tabs variant="primary" className="hidden lg:flex border-b-2">
 					<NavLink
 						className={`${tab === "about" ? "bg-black/5 " : ""}`}
@@ -57,12 +57,12 @@ const CourseDetails = ({ details }) => {
 
 				<div className="text-neutral pb-5">
 					<h2 className="font-semibold text-lg">Details to know</h2>
-					<div className="flex w-full flex-wrap *:w-full sm:*:w-1/2 lg:*:w-1/3">
-						<div className="flex flex-col gap-1 py-4">
+					<div className="flex flex-wrap justify-between">
+						<div className="flex flex-col gap-1 py-4 w-full sm:w-1/2 lg:w-1/3">
 							{details.certificate.offered ? (
-								<FaLinkedin className="text-primary size-7" />
+								<FaLinkedin className="text-primary text-3xl" />
 							) : (
-								<GrCertificate className="size-7" />
+								<GrCertificate className="text-3xl" />
 							)}
 							<div className="flex flex-col gap-1">
 								{details.certificate.offered ? (
@@ -79,14 +79,14 @@ const CourseDetails = ({ details }) => {
 							</div>
 						</div>
 
-						<div className="flex flex-col gap-1 py-4">
-							<FaTasks className="size-7" />
+						<div className="flex flex-col gap-1 py-4 w-full sm:w-1/2 lg:w-1/3">
+							<FaTasks className="text-3xl" />
 							<h4 className="font-medium">Assessments</h4>
 							<p className="text-sm">5 assignments</p>
 						</div>
 
-						<div className="flex flex-col gap-1 py-4">
-							<HiOutlineChatBubbleLeftEllipsis className="size-7" />
+						<div className="flex flex-col gap-1 py-4 w-full sm:w-1/2 lg:w-1/3">
+							<HiOutlineChatBubbleLeftEllipsis className="text-3xl" />
 							<h4 className="font-medium">Taught in English</h4>
 							<p className="text-sm font-semibold text-primary hover:text-primary-dark cursor-pointer hover:underline">
 								2 languages available

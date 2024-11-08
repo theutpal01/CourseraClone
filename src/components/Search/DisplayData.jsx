@@ -5,12 +5,14 @@ import { courses } from "../../data";
 const DisplayData = () => {
 	return (
 		<>
-			<div className="grid grid-cols-3 gap-8 mx-auto">
+			{/* Responsive grid for course cards */}
+			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mx-auto">
 				{courses.map((course) => (
 					<CourseCard key={course.id} course={course} />
 				))}
 			</div>
 
+			{/* Pagination controls */}
 			<div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
 				<div className="flex flex-1 justify-between sm:hidden">
 					<a

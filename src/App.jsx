@@ -9,6 +9,7 @@ import MyLearning from "./pages/MyLearning";
 import Course from "./pages/Course";
 import Contact from "./components/Services/Contact";
 import Header from "./components/Base/Header";
+import Business from "./components/Businesspage/business";
 
 function App() {
 	const [tab, setTab] = useState("individual")
@@ -27,6 +28,7 @@ function App() {
 						<Route path="/courses" element={<Courses login={login} />} />
 						<Route path="/contact" element={<Contact />} />
 						<Route path="courses/:id" element={<Course />} />
+						<Route path="/business" element={<Business/>}/>
 					</Routes>
 				</main>
 				<Footer childContact="/contact" />

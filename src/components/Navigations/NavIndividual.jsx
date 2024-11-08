@@ -70,6 +70,9 @@ function NavIndividual({ login, setLogin }) {
 		setLogin(true); // Reset logged out state
 		setIsMobileMenuOpen(false); // Close mobile menu if it's open
 	};
+	if (location.pathname === "/business") {
+        return null;
+    }
 
 	return (
 		<>
@@ -102,30 +105,40 @@ function NavIndividual({ login, setLogin }) {
 							</Button>
 							{isDropdownOpen && (
 								<div className="absolute mt-2 w-64 bg-white border rounded-md shadow-lg p-4 z-50">
-									{/* Goals Section */}
+									<div  className="p-4 relative"
+										onMouseLeave={()=>setHoveredLink(null)}	
+										>
+
+										</div>
+									   
+									
 									<div className="mb-4">
 										<h3 className="font-semibold text-gray-800">Goals</h3>
 										<NavLink
-											to="/home"
+											to="/goal1"
 											className="block px-2 py-1 text-gray-700 hover:bg-gray-100"
+											onMouseEnter={()=> setHoveredLink("goal1")}
 										>
 											Take a free course
 										</NavLink>
 										<NavLink
-											to="/home"
+											to="/goal2"
 											className="block px-2 py-1 text-gray-700 hover:bg-gray-100"
+											onMouseEnter={()=> setHoveredLink("goal2")}
 										>
 											Earn a degree
 										</NavLink>
 										<NavLink
-											to="/home"
+											to="/goal3"
 											className="block px-2 py-1 text-gray-700 hover:bg-gray-100"
+											onMouseEnter={()=> setHoveredLink("goal3")}
 										>
 											Earn a Certificate
 										</NavLink>
 										<NavLink
-											to="/home"
+											to="/goal4"
 											className="block px-2 py-1 text-gray-700 hover:bg-gray-100"
+											onMouseEnter={()=> setHoveredLink("goal4")}
 										>
 											Find your new career
 										</NavLink>
@@ -135,26 +148,30 @@ function NavIndividual({ login, setLogin }) {
 									<div className="mb-4">
 										<h3 className="font-semibold text-gray-800">Subjects</h3>
 										<NavLink
-											to="/home"
+											to="/subject1"
 											className="block px-2 py-1 text-gray-700 hover:bg-gray-100"
+											onMouseEnter={()=> setHoveredLink("subject1")}
 										>
 											Data Science
 										</NavLink>
 										<NavLink
-											to="/home"
+											to="/subject2"
 											className="block px-2 py-1 text-gray-700 hover:bg-gray-100"
+											onMouseEnter={()=> setHoveredLink("subject2")}
 										>
 											Business
 										</NavLink>
 										<NavLink
-											to="/home"
+											to="/subject3"
 											className="block px-2 py-1 text-gray-700 hover:bg-gray-100"
+											onMouseEnter={()=> setHoveredLink("subject3")}
 										>
 											Computer Science
 										</NavLink>
 										<NavLink
-											to="/home"
+											to="/subject4"
 											className="block px-2 py-1 text-gray-700 hover:bg-gray-100"
+											onMouseEnter={()=> setHoveredLink("subject4")}
 										>
 											Information Technology
 										</NavLink>
@@ -210,6 +227,7 @@ function NavIndividual({ login, setLogin }) {
 										Browse all subjects
 									</NavLink>
 								</div>
+								
 							)}
 						</div>
 
@@ -420,6 +438,7 @@ function NavIndividual({ login, setLogin }) {
 							>
 								Log Out
 							</button>
+							
 						</>
 					)}
 				</div>

@@ -4,8 +4,8 @@ import DisplayData from "../components/Search/DisplayData";
 
 const Courses = () => {
 	return (
-		<div className="flex min-h-screen">
-			<div className="p-5 px-20 max-w-sm w-full">
+		<div className="flex flex-col lg:flex-row min-h-screen"> {/* Changed to flex-col for small screens */}
+			<div className="p-5 max-w-xs w-full lg:max-w-sm lg:w-1/4"> {/* Adjusted width for larger screens */}
 				<h2 className="text-xl text-neutral font-medium">Filter by</h2>
 				<FilterGroup
 					heading="Levels"
@@ -42,7 +42,7 @@ const Courses = () => {
 					options={["Beginner", "Intermediate", "Advanced", "Free"]}
 				/>
 			</div>
-			<div className="flex-grow flex flex-col gap-5 p-5">
+			<div className="flex-grow flex flex-col gap-5 p-5 lg:p-5"> {/* Maintained padding and flex-grow for content area */}
 				<DisplayData />
 			</div>
 		</div>

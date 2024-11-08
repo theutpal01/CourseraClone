@@ -22,7 +22,7 @@ function Browse() {
             {sections.map((section, index) => (
                 <div key={index} className="mb-12">
                     <h2 className="text-2xl font-semibold text-slate-800 mb-4">{section.heading}</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4"> {/* Added sm:grid-cols-2 for better responsiveness on small devices */}
                         <Card title="Course 1" />
                         <Card title="Course 2" />
                         <Card title="Course 3" />

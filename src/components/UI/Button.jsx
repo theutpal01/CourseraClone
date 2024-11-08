@@ -38,10 +38,10 @@ const Button = ({
 	};
 
 	const sizes = {
-		"sm": "text-sm p-2",
-		"md": "p-4",
-		"lg": "text-lg p-5",
-		"xl": "text-2xl p-6",
+		"sm": "text-sm p-2 md:p-3",
+		"md": "p-4 md:p-5",
+		"lg": "text-lg p-5 md:p-6",
+		"xl": "text-2xl p-6 md:p-7",
 	};
 
 	return (
