@@ -127,7 +127,7 @@ function NavIndividual({ setLogin, setRegister }) {
                                 <input
                                     type="text"
                                     placeholder="What do you want to learn?"
-                                    className="pl-3 py-2 bg-white border border-gray-300 rounded-full focus:outline-none focus:border-blue-500 w-96"
+                                    className="pl-3 py-2 bg-white border border-gray-300 rounded-full focus:outline-none focus:border-blue-500 w-80"
                                 />
                                 <NavLink
                                     className="absolute right-[4px] cursor-pointer hover:bg-blue-500/80 duration-300 transition-all bg-blue-500 rounded-full active:scale-90 text-white text-xl origin-center w-auto h-auto p-[8px]"
@@ -140,7 +140,7 @@ function NavIndividual({ setLogin, setRegister }) {
                         </div>
 
                         <FiX
-                            className={`${isSearching ? "visible" : "hidden"} text-3xl cursor-pointer hover:text-gray-700`}
+                            className={`${isSearching ? "visible" : "hidden"} text-3xl cursor-pointer hover:text-gray-700 md:hidden lg:hidden`}
                             onClick={() => setIsSearching(!isSearching)}
                         />
 
@@ -329,7 +329,7 @@ function NavIndividual({ setLogin, setRegister }) {
                                         onClick={() => setLanguageDropdown(!languageDropdown)}
                                         className="p-2 text-gray-600 hover:text-gray-700"
                                     >
-                                        <LuGlobe />
+                                        <LuGlobe className="text-2xl" />
                                     </button>
                                     {languageDropdown && (
                                         <div className="absolute right-0 mt-2 w-32 bg-white border rounded-md shadow-lg p-2">
@@ -340,10 +340,34 @@ function NavIndividual({ setLogin, setRegister }) {
                                                 English
                                             </button>
                                             <button
-                                                onClick={() => handleLanguageSelect("Español")}
+                                                onClick={() => handleLanguageSelect("العربية")}
                                                 className="block w-full text-left px-2 py-1 hover:bg-gray-100"
                                             >
-                                                Español
+                                                العربية
+                                            </button>
+                                            <button
+                                                onClick={() => handleLanguageSelect("Deutsch")}
+                                                className="block w-full text-left px-2 py-1 hover:bg-gray-100"
+                                            >
+                                                Deutsch
+                                            </button>
+                                            <button
+                                                onClick={() => handleLanguageSelect("हिन्दी")}
+                                                className="block w-full text-left px-2 py-1 hover:bg-gray-100"
+                                            >
+                                                हिन्दी
+                                            </button>
+                                            <button
+                                                onClick={() => handleLanguageSelect("한국인")}
+                                                className="block w-full text-left px-2 py-1 hover:bg-gray-100"
+                                            >
+                                                한국인
+                                            </button>
+                                            <button
+                                                onClick={() => handleLanguageSelect("Italiano")}
+                                                className="block w-full text-left px-2 py-1 hover:bg-gray-100"
+                                            >
+                                                Italiano
                                             </button>
                                         </div>
                                     )}
@@ -354,11 +378,16 @@ function NavIndividual({ setLogin, setRegister }) {
                                         onClick={() => setNotificationsDropdown(!notificationsDropdown)}
                                         className="p-2 text-gray-600 hover:text-gray-700"
                                     >
-                                        <LuBell />
+                                        <LuBell className="text-2xl" />
                                     </button>
                                     {notificationsDropdown && (
-                                        <div className="absolute right-0 mt-2 w-48 bg-white border rounded-md shadow-lg p-2">
-                                            <p className="text-gray-600">No new notifications</p>
+                                        <div className="absolute right-0 mt-2 w-96 bg-white border rounded-md shadow-lg p-2">
+                                            <h2 className="text-black font-semibold my-2">Notifications</h2>
+                                            <hr />
+                                            <div className="text-center mt-8">
+                                                <p className="text-gray-600 text-xl">No notifications</p>
+                                                <p className="mt-2 opacity-60 mb-2">We&apos;ll let you know when deadlines are approaching, or there is a course update</p>
+                                            </div>
                                         </div>
                                     )}
                                 </div>
@@ -368,10 +397,10 @@ function NavIndividual({ setLogin, setRegister }) {
                                         onClick={() => setProfileDropdown(!profileDropdown)}
                                         className="p-2 text-gray-600 hover:text-gray-700"
                                     >
-                                        <LuUser />
+                                        <LuUser className="text-2xl" />
                                     </button>
                                     {profileDropdown && (
-                                        <div className="absolute right-0 mt-2 w-48 bg-white border rounded-md shadow-lg p-2">
+                                        <div className="absolute right-0 mt-2 w-60 bg-white border rounded-md shadow-lg p-2">
                                             <p className="font-bold text-lg text-gray-800 px-2 py-2">
                                                 {user && user.name}
                                             </p>
@@ -379,13 +408,37 @@ function NavIndividual({ setLogin, setRegister }) {
                                                 to="/profile"
                                                 className="block px-2 py-1 text-gray-700 hover:bg-gray-100"
                                             >
-                                                View Profile
+                                                Profile
+                                            </NavLink>
+                                            <NavLink
+                                                to="/my-purchases"
+                                                className="block px-2 py-1 text-gray-700 hover:bg-gray-100"
+                                            >
+                                                My Purchases
                                             </NavLink>
                                             <NavLink
                                                 to="/settings"
                                                 className="block px-2 py-1 text-gray-700 hover:bg-gray-100"
                                             >
                                                 Settings
+                                            </NavLink>
+                                            <NavLink
+                                                to="/updates"
+                                                className="block px-2 py-1 text-gray-700 hover:bg-gray-100"
+                                            >
+                                                Updates
+                                            </NavLink>
+                                            <NavLink
+                                                to="/accomplishments"
+                                                className="block px-2 py-1 text-gray-700 hover:bg-gray-100"
+                                            >
+                                                Accomplishments
+                                            </NavLink>
+                                            <NavLink
+                                                to="/help-center"
+                                                className="block px-2 py-1 text-gray-700 hover:bg-gray-100"
+                                            >
+                                                Help Center
                                             </NavLink>
                                             <NavLink>
                                                 <button
@@ -394,6 +447,32 @@ function NavIndividual({ setLogin, setRegister }) {
                                                 >
                                                     Log Out
                                                 </button>
+                                            </NavLink>
+                                            <hr className="mt-2"/>
+                                            <NavLink
+                                                to="/get-courses"
+                                            >
+                                                <Button
+                                                    variant=""
+                                                    type=""
+                                                    size="md"
+                                                    className="w-full text-left my-2 px-2 mx-0 hover:bg-gray-100"
+                                                >
+                                                    <div className="flex justify-between items-center">
+                                                        <div>
+                                                            <div className="text-sm text-blue-600 font-medium flex items-center">
+                                                                Get Coursera
+                                                                <div className="mx-1 w-6 h-auto bg-blue-600 text-white text-[0.7rem] text-center flex items-center justify-center">
+                                                                    PLUS
+                                                                </div>
+                                                            </div>
+                                                            <div className="text-[0.7rem] my-1">
+                                                                Access 7,000+ courses
+                                                            </div>
+                                                        </div>
+                                                        <LuArrowUpRightFromCircle className="text-blue-600 text-md" />
+                                                    </div>
+                                                </Button>
                                             </NavLink>
                                         </div>
                                     )}
@@ -550,9 +629,6 @@ function NavIndividual({ setLogin, setRegister }) {
                                     <hr />
 
                                     <div className="flex flex-col gap-2 mt-2">
-                                        {/* <NavLink to="/individual" className="block py-2 hover:text-gray-700" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-                                            For Individuals
-                                        </NavLink> */}
                                         <NavLink to="/businesses" className="block py-2 hover:text-gray-700" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
                                             For Businesses
                                         </NavLink>
@@ -562,9 +638,6 @@ function NavIndividual({ setLogin, setRegister }) {
                                         <NavLink to="/university" className="block py-2 hover:text-gray-700" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
                                             For Universities
                                         </NavLink>
-                                        {/* <NavLink to="/student" className="block py-2 hover:text-gray-700" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-                                            Student
-                                        </NavLink> */}
 
                                         {/* Join for Free and Log In at the bottom */}
                                         <div className="mt-80">
