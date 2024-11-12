@@ -140,7 +140,7 @@ function NavIndividual({ setLogin, setRegister }) {
                         </div>
 
                         <FiX
-                            className={`${isSearching ? "visible" : "hidden"} text-3xl cursor-pointer hover:text-gray-700 md:hidden lg:hidden`}
+                            className={`${isSearching ? "visible" : "hidden"} text-3xl cursor-pointer hover:text-gray-700 lg:hidden`}
                             onClick={() => setIsSearching(!isSearching)}
                         />
 
